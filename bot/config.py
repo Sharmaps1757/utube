@@ -3,39 +3,35 @@ import os
 
 class Config:
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    BOT_TOKEN = "5226403177:AAEwSR3tC9uo9DrIwxqvWe5RmmWl13earqc"
 
-    SESSION_NAME = os.environ.get("SESSION_NAME", ":memory:")
+    SESSION_NAME = "youtubeitbot"
 
-    API_ID = int(os.environ.get("API_ID"))
+    API_ID = "13593326"
 
-    API_HASH = os.environ.get("API_HASH")
+    API_HASH = "36366cef731c918dd557ac681e3fe993"
 
-    CLIENT_ID = os.environ.get("CLIENT_ID")
+    CLIENT_ID = "169050201647-dsfn3821df1pinlsgfajpbrua8ke3rj7.apps.googleusercontent.com"
 
-    CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+    CLIENT_SECRET = "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"
 
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    BOT_OWNER = "1941962687"
 
-    AUTH_USERS_TEXT = os.environ.get("AUTH_USERS", "")
+    AUTH_USERS_TEXT= "1941962687"
 
-    AUTH_USERS = [BOT_OWNER, 374321319] + (
+    AUTH_USERS = [BOT_OWNER, 1941962687] + (
         [int(user.strip()) for user in AUTH_USERS_TEXT.split(",")]
         if AUTH_USERS_TEXT
         else []
     )
 
-    VIDEO_DESCRIPTION = (
-        os.environ.get("VIDEO_DESCRIPTION", "").replace("<", "").replace(">", "")
-    )
+    VIDEO_DESCRIPTION = ""
 
-    VIDEO_CATEGORY = (
-        int(os.environ.get("VIDEO_CATEGORY")) if os.environ.get("VIDEO_CATEGORY") else 0
-    )
+    VIDEO_CATEGORY = ""
+  
+    VIDEO_TITLE_PREFIX = ""
 
-    VIDEO_TITLE_PREFIX = os.environ.get("VIDEO_TITLE_PREFIX", "")
-
-    VIDEO_TITLE_SUFFIX = os.environ.get("VIDEO_TITLE_SUFFIX", "")
+    VIDEO_TITLE_SUFFIX = ""
 
     DEBUG = bool(os.environ.get("DEBUG"))
 
